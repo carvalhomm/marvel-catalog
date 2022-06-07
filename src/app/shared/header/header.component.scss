@@ -1,0 +1,12 @@
+@import '../../../styles/variables.scss';
+
+mat-toolbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: $amber-purple;
+    h1 {
+        color: #fff;
+    }
+}
