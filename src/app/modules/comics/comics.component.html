@@ -1,1 +1,4 @@
-<p>comics works!</p>
+<app-listagem *ngIf="isListagem; else detalhes" type="comics" [data]="data" (openDetalhes)="openDetalhes($event)"></app-listagem>
+<ng-template #detalhes>
+    <app-detalhes type="comics" [detalhesUrl]="detalhesUrl" (voltar)="openListagem($event)"></app-detalhes>
+</ng-template>

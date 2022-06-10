@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CreatorsComponent } from './creators.component';
 import { CreatorsRoutes } from './creators.routes';
 import { CreatorsService } from './creators.service';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 
@@ -12,6 +13,7 @@ import { CreatorsService } from './creators.service';
   ],
   imports: [
     CommonModule,
+    SharedModule,
     CreatorsRoutes
   ],
   providers: [

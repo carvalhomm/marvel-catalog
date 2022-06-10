@@ -7,4 +7,6 @@ export interface IMarvelObject {
     title: string;
     name: string;
     details: string;
+    description: string;
+    resourceUri: string;
 }

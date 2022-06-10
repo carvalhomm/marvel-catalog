@@ -1,1 +1,4 @@
-<p>creators works!</p>
+<app-listagem *ngIf="isListagem; else detalhes" type="creators" [data]="data" (openDetalhes)="openDetalhes($event)"></app-listagem>
+<ng-template #detalhes>
+    <app-detalhes type="creators" [detalhesUrl]="detalhesUrl" (voltar)="openListagem($event)"></app-detalhes>
+</ng-template>

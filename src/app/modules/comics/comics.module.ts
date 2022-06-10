@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ComicsComponent } from './comics.component';
 import { ComicsRoutes } from './comics.routes';
 import { ComicsService } from './comics.service';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 
@@ -12,6 +13,7 @@ import { ComicsService } from './comics.service';
   ],
   imports: [
     CommonModule,
+    SharedModule,
     ComicsRoutes
   ],
   providers: [

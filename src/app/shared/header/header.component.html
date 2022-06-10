@@ -1,3 +1,8 @@
 <mat-toolbar>
-    <h1>Catálogo da Marvel</h1>
+    <mat-toolbar-row><h1>Catálogo da Marvel</h1></mat-toolbar-row>
+    <mat-toolbar-row class="menu">
+        <div class="item" (click)="goToModule('characters')">Characters</div>
+        <div class="item" (click)="goToModule('comics')">Comics</div>
+        <div class="item" (click)="goToModule('creators')">Creators</div>
+    </mat-toolbar-row>
 </mat-toolbar>
