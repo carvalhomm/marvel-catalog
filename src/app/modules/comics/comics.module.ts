@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ComicsComponent } from './comics.component';
 import { ComicsRoutes } from './comics.routes';
-import { ComicsService } from './comics.service';
 import { SharedModule } from 'src/app/shared/shared.module';
 
 
@@ -17,7 +16,6 @@ import { SharedModule } from 'src/app/shared/shared.module';
     ComicsRoutes
   ],
   providers: [
-    ComicsService
   ]
 })
 export class ComicsModule { }

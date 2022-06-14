@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IMarvelApi } from 'src/app/core/models/marvelApi.interface';
-import { CharactersService } from './characters.service';
+import { ApiService } from 'src/app/core/services/api.service';
 
 @Component({
   selector: 'app-characters',
@@ -11,10 +11,10 @@ export class CharactersComponent implements OnInit {
   public data: IMarvelApi = null;
   public isListagem: boolean = true;
   public detalhesUrl: string;
-  constructor(private charactersService: CharactersService) { }
+  constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
-    this.charactersService.getCharacters().then(result => {
+    this.apiService.getApi('characters').then(result => {
       this.data = result;
     }).catch(error => {
       console.log('error character api --> ', error);

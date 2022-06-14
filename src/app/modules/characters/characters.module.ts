@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { CharactersComponent } from './characters.component';
 import { CharactersRoutes } from './characters.routes';
 import { CharactersGuard } from './characters.guard';
-import { CharactersService } from './characters.service';
 import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
@@ -16,8 +15,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
     CharactersRoutes
   ],
   providers: [
-    CharactersGuard,
-    CharactersService
+    CharactersGuard
   ]
 })
 export class CharactersModule { }

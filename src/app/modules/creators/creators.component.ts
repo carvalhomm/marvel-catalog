@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IMarvelApi } from 'src/app/core/models/marvelApi.interface';
-import { CreatorsService } from './creators.service';
+import { ApiService } from 'src/app/core/services/api.service';
 
 @Component({
   selector: 'app-creators',
@@ -12,10 +12,10 @@ export class CreatorsComponent implements OnInit {
   public isListagem: boolean = true;
   public detalhesUrl: string;
 
-  constructor(private creatorsService: CreatorsService) { }
+  constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
-    this.creatorsService.getCreators().then(result => {
+    this.apiService.getApi('creators').then(result => {
       this.data = result;
     }).catch(error => {
       console.log('error creators api --> ', error);

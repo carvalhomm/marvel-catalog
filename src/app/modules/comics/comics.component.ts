@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IMarvelApi } from 'src/app/core/models/marvelApi.interface';
-import { ComicsService } from './comics.service';
+import { ApiService } from 'src/app/core/services/api.service';
 
 @Component({
   selector: 'app-comics',
@@ -12,10 +12,10 @@ export class ComicsComponent implements OnInit {
   public isListagem: boolean = true;
   public detalhesUrl: string;
 
-  constructor(private comicsService: ComicsService) { }
+  constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
-    this.comicsService.getComics().then(result => {
+    this.apiService.getApi('comics').then(result => {
       this.data = result;
     }).catch(error => {
       console.log('erro comics api --> ', error);
